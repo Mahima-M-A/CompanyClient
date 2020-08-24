@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.dto;
 
 public class Result {
 	private String companyId, companyName, companyEmail, companyLogo, companyProfile, hiringForBranches;
@@ -13,6 +13,7 @@ public class Result {
 		this.companyProfile = companyProfile;
 		this.hiringForBranches = hiringForBranches;
 	}
+	
 	public String getCompanyId() {
 		return companyId;
 	}

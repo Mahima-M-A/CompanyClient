@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.dto;
 
 public class Data {
 	private Result result;
@@ -10,7 +10,7 @@ public class Data {
 	public Data(Result result) {
 		this.result = result;
 	}
-
+	
 	public Result getResult() {
 		return result;
 	}
@@ -18,5 +18,4 @@ public class Data {
 	public void setResult(Result result) {
 		this.result = result;
 	}
-	
 }

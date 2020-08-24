@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.filters;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,6 +23,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
+
+import com.example.demo.config.MyAuthToken;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

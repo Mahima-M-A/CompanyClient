@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
+
+import com.example.demo.dto.CompanyResponse;
+import com.example.demo.dto.Data;
+import com.example.demo.dto.Result;
 
 import reactor.core.publisher.Mono;
 
@@ -39,14 +43,14 @@ public class CompanyController {
 		        1
 		);*/
 		
-		Company response = webClientBuilder.build()
+		CompanyResponse response = webClientBuilder.build()
 				.get()
 				.uri("http://localhost:8084/company/" + cid)
 				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
 				.header("x-request-id", "COM123")
 				.header("Authorization", "COM123")
 				.retrieve()
-				.bodyToMono(Company.class)
+				.bodyToMono(CompanyResponse.class)
 				.block();
 		
         Data data = response.getData();

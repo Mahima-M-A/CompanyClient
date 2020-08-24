@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.example.demo.dto;
 
-public class Company {
+public class CompanyResponse {
 	private Data data;
 	
-	public Company() {
+	public CompanyResponse() {
 		
 	}
 
-	public Company(Data data) {
+	public CompanyResponse(Data data) {
 		this.data = data;
 	}
 
